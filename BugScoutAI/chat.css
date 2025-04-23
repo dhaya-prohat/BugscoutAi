@@ -1,0 +1,125 @@
+
+
+#chat-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #000000;
+    padding: 10px;
+    color: white;
+}
+
+.new-chat {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.new-chat:hover {
+    background-color: #333;
+}
+
+#mainbox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: black ;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    background: none;
+    border: none;
+    background-color: rgb(2, 2, 99);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* SVG Icons */
+.sparkles-icon::before, .send-icon::before {
+    content: url('icons/sparkles.svg');
+}
+
+.send-icon::before {
+    content: url('icons/send-horizontal.svg');
+}
+
+.bot-icon::before {
+    content: url('icons/bot.svg');
+}
+
+.user-icon::before {
+    content: url('icons/user.svg');
+}
+
+/* Message Styling */
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.user .message-content {
+    background-color: #6b46c1; /* Purple for user messages */
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    max-width: 70%;
+}
+
+.message.bot .message-content {
+    background-color: #6b46c1; /* Gray for bot messages */
+    border-radius: 12px;
+    padding: 10px;
+    max-width: 70%;
+}
+
+/* Loading Indicator */
+.loading {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.loading .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #888888;
+    border-radius: 50%;
+    animation: blink 1.4s infinite both;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    20% { opacity: 1; }
+}
+
+/* Spacing between icons and messages */
+.message.user .user-icon,
+.message.bot .bot-icon {
+    margin-right: 8px; /* Adds space between icon and message */
+}
+
+.new-chat .sparkles-icon {
+    margin-right: 8px; /* Adds space between sparkles icon and "New Chat" text */
+}
