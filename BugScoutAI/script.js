@@ -28,10 +28,7 @@ function render() {
                 </button>
 
                 <!-- Report Button -->
-                <button onclick="switchSection('report')" class="flex items-center space-x-2 text-white hover:text-blue-400">
-                    <img src="./svgs/report.svg" class="h-5 w-5" alt="Report Icon" />
-                    <span>Report</span>
-                </button>
+                
 
             </div>
         </nav>
